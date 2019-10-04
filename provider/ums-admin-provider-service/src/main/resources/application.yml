@@ -1,12 +1,12 @@
 spring:
   application:
     name: ums-admin-provider
-  main:
-    allow-bean-definition-overriding: true
+#  main:
+#    allow-bean-definition-overriding: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.141.110:4000/mplus_ums_admin?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mplus_ums_admin?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: root
     hikari:
@@ -20,7 +20,7 @@ spring:
       connection-test-query: SELECT 1
 dubbo:
   scan:
-    base-packages: com.funtl.myshop.plus.provider.service
+    base-packages: cn.yusite.shop.provider.service
   protocol:
     name: dubbo
     port: -1
@@ -29,5 +29,5 @@ dubbo:
     address: nacos://127.0.0.1
     port: 8848
 mybatis:
-  type-aliases-package: com.funtl.myshop.plus.provider.domain
+  type-aliases-package: cn.yusite.shop.provider.domain
   mapper-locations: classpath:mapper/*.xml

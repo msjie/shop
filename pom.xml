@@ -17,7 +17,11 @@
 
     <modules>
         <module>dependencies</module>
+        <module>common</module>
+        <module>configuration</module>
         <module>provider</module>
+        <module>business</module>
+        <module>gateway</module>
     </modules>
 
     <properties>
@@ -139,6 +143,17 @@
             <url>https://repo.spring.io/snapshot</url>
             <snapshots>
                 <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>alimaven</id>
+            <name>Maven Aliyun Mirror</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
             </snapshots>
         </repository>
     </repositories>

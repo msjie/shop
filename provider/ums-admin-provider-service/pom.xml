@@ -14,6 +14,7 @@
 
     <description>
         对内提供服务(rpc)，不对外提供服务(http)
+        服务提供者一般为数据访问层
     </description>
 
     <dependencies>
@@ -104,6 +105,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.27</version>
         </dependency>
         <dependency>
             <groupId>tk.mybatis</groupId>
